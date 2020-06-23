@@ -1,0 +1,45 @@
+
+
+@media only screen and (max-width: 479px){
+  .gallery-wrap {
+    .img-small-wrap{
+      text-align: center; 
+      img{
+        width: 20%;
+        height: 20%;
+      }
+    }
+    .img-big-wrap{
+      text-align: center;
+      width: 5%;
+      height: 5%;
+    }
+  }
+}
+.gallery-wrap .img-big-wrap{  
+      width: 50%;
+     height: 50%;
+
+}
+.gallery-wrap .img-small-wrap {
+  text-align: center;
+  .item-gallery{
+    width: 60px;
+    height: 60px;
+    border: 1px solid #ddd;
+    margin: 7px 2px;
+    display: inline-block;
+    overflow: hidden;
+  }
+  img{
+    width: 50%;
+    height: 50%;
+    object-fit: cover;
+    border-radius: 4px;
+    cursor: pointer;
+
+    height: 250px;
+    width: auto;
+    display: inline-block;
+  }
+}

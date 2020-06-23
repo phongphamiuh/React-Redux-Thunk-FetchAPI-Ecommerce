@@ -1,0 +1,34 @@
+{
+  "name": "ecommerce",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "bootstrap": "^4.5.0",
+    "node-sass": "^4.14.1",
+    "react": "^16.8.3",
+    "react-bootstrap": "^1.0.1",
+    "react-dom": "^16.8.3",
+    "react-medium-image-zoom": "^3.0.15",
+    "react-redux": "^6.0.1",
+    "react-router-dom": "^4.3.1",
+    "react-scripts": "2.1.5",
+    "react-slideshow-image": "^1.5.3",
+    "redux": "^4.0.1",
+    "slicknav": "^1.0.8"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ]
+}

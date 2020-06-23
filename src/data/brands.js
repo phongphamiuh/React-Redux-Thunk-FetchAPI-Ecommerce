@@ -1,0 +1,1 @@
+export const categorys = ["java","spring","hibernate","jdbc","springboot","swing","springsecurity"];

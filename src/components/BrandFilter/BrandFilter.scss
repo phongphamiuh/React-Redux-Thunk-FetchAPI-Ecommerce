@@ -1,0 +1,135 @@
+.nav-brandfilter {
+	background: #252525;
+	display: flex;
+	.nav-depart{
+		float: left;
+		.depart-btn{
+			background: #3b3b3b;
+			color: #ffffff;
+			padding: 10px 84px 14px 58px;
+			cursor: pointer;
+			position: relative;
+			&:hover .depart-hover{
+				top: 52px;
+				opacity: 1;
+				visibility: visible;
+				z-index: 99;
+			}
+			&:before{
+				position: absolute;
+				color: #ffffff;
+				right: 20px;
+				top: 13px;
+				content: "";
+				font-family: FontAwesome;
+				font-size: 18px;
+			}
+			i{
+				color: #ffffff;
+				font-size: 16px;	
+			}
+			span{
+				font-size: 14px;
+				font-weight: 700;
+				text-transform: uppercase;
+				margin-left: 16px;
+			}
+			.depart-hover{
+				position: absolute;
+				width: 100%;
+				background: #fff;
+				left: 0;
+				top: 62px;
+				opacity: 0;
+				visibility: hidden;
+				padding-bottom: 29px;
+				-webkit-box-shadow: 0 13px 32px rgba(51, 51, 51, 0.1);
+				box-shadow: 0 13px 32px rgba(51, 51, 51, 0.1);
+				-webkit-transition: all 0.3s;
+				-o-transition: all 0.3s;
+				transition: all 0.3s;
+				li{
+					list-style: none;	
+					
+					a{
+						display: block;
+						font-size: 16px;
+						color: #000000;
+						padding-left: 40px;
+						padding-top: 16px;
+						padding-right: 30px;
+						-webkit-transition: all 0.3s;
+						-o-transition: all 0.3s;
+						transition: all 0.3s;
+						&:hover{
+							color: #e7ab3c;
+						}
+					}
+				}				
+			}
+		}
+		
+	}
+}
+
+
+.custom-checkbox {
+	display: block;
+	position: relative;
+	padding-left: 2rem;
+	cursor: pointer;
+	user-select: none;
+  
+	&__input {
+	  position: absolute;
+	  opacity: 0;
+	  height: 0;
+	  width: 0;
+  
+  
+	}
+  
+	&__span {
+	  position: absolute;
+	  top: 50%;
+	  left: 0;
+	  transform: translateY(-50%);
+	  height: 1.2rem;
+	  width: 1.2rem;
+	  background-color: white;
+	  border: 2px solid gray;
+  
+	  &::after {
+		content: "";
+		opacity: 0;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		width: .6rem;
+		height: .6rem;
+		background-color: dodgerblue;
+		transform: translate(-50%, -50%);
+	  }
+	}
+  
+	&:hover &__span {
+	  background-color: #eeeeee;
+	}
+  
+	&__input:checked + &__span::after {
+	  opacity: 1;
+	}
+  }
+  
+  .flex-50 {
+	flex: 0 0 100%;
+  }
+  
+  @media only screen and (max-width: 768px) {
+  
+	.flex-50 {
+	  flex: 0 0 50%;
+	}
+  }
+
+
