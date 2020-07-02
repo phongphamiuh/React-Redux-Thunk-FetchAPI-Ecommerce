@@ -1,0 +1,44 @@
+.MuiExpansionPanelSummary-content{
+    .MuiTypography-body1{
+        color: black;
+        font-weight: bold;
+    }
+}
+.credit{
+    i{
+        font-size: 25px;      
+        &:last-child{
+            margin-left: 10px;
+        }
+    }
+}
+.rules{
+    span{
+        &:last-child{
+            margin-left: 10px;
+        }
+    }
+}
+.currency, .num{
+    color: black;
+    font-weight: bold;
+}
+.wr{
+    font-size: 50px;
+    border-radius: 2px;
+    width: 100%;
+    a{
+        font-weight: bold;
+        color: black;
+    }
+}
+.typo-text{
+    margin-top: 20px;
+    li{
+        color: #999999;
+        font-size: 0.92857rem;
+        line-height: 1.53846;
+        font-weight: normal;
+        font-family: "Encode Sans Regular", sans-serif;
+    }
+}

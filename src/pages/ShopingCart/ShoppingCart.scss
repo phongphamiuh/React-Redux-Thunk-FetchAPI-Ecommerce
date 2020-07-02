@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Encode+Sans+Condensed&display=swap');
+
+*{
+	font-family: 'Encode Sans Condensed', sans-serif;
+}
+
+
+.couple{
+    margin:10px 0;
+    .btn-default{
+        border-color: #ccc;
+    }
+    .input-group-btn{
+        border-color: #ccc;
+    }
+
+}
+.continue{
+    button{        
+        display: block;
+        margin: 0 auto;
+        width: 100%;
+        margin-top:20px;
+    }
+    a{
+        color: black;
+        font-weight: bold;
+        &:hover{
+            color: black;
+
+        }
+    }
+}
+.btn-primary {
+    a{
+        color: black;
+        font-weight: bold; 
+        &:hover{
+            color: black;
+
+        }
+    }
+}

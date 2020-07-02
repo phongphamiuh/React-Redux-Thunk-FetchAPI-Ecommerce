@@ -1,127 +1,80 @@
-/*---------------------
-  Register Form
------------------------*/
+@import url('https://fonts.googleapis.com/css2?family=Encode+Sans+Condensed&display=swap');
 
-.register-login-section {
-	padding-top: 72px;
-	padding-bottom: 80px;
+*{
+	font-family: 'Encode Sans Condensed', sans-serif;
 }
-
-.register-form h2,
-.login-form h2 {
-	color: #252525;
-	font-weight: 700;
-	text-align: center;
-	margin-bottom: 35px;
-}
-
-.register-form form .group-input,
-.login-form form .group-input {
-	margin-bottom: 25px;
-}
-
-.register-form form .group-input label,
-.login-form form .group-input label {
-	display: block;
-	font-size: 18px;
-	color: #252525;
-	margin-bottom: 13px;
-}
-
-.register-form form .group-input input,
-.login-form form .group-input input {
-	border: 1px solid #ebebeb;
-	height: 50px;
+.formi{
+	max-width: 500px;
 	width: 100%;
-	padding-left: 20px;
-	padding-right: 15px;
+	margin: 10px auto;
+	h1 {
+		text-align: center;
+	}
+	label,
+	input {
+		display: block;
+		width: 100%;
+	}
+	label {
+		margin-bottom: 5px;
+		height: 22px;
+	}
+	input {
+		margin-bottom: 20px;
+		padding: 10px;
+		border-radius: 3px;
+		border: 1px solid #777;
+		&.error{
+			border-color: red;
+		}
+	  }
+	  .input-feedback {
+		color: rgb(235, 54, 54);
+		margin-top: 5px;
+		font-size: 14px;
+		margin-bottom: 20px;
+	  }
+	  button {
+		margin: 0 auto;
+		padding: 5px 100px;
+		width: 100%;
+		background: rgb(253, 216, 53);
+		color: rgb(74, 74, 74);
+		border: 1px solid rgb(70, 153, 179);
+		background-color: 250ms;
+		border-radius: 2px;
+		display:block;
+		margin-top: 10px;
+		&:hover{
+			cursor: pointer;
+			background: rgba(253, 216, 53, 0.904);
+			
+		}
+		a{
+			color: rgb(74, 74, 74);
+			&:hover{
+				cursor: pointer;
+				background: rgba(253, 216, 53, 0.904);
+				color: rgb(74, 74, 74);
+			}
+		}
+	  }
+	}
+.MuiDialog-scrollPaper{
+	overflow: scroll;
 }
-
-.register-form form .register-btn,
-.register-form form .login-btn,
-.login-form form .register-btn,
-.login-form form .login-btn {
-	width: 100%;
-	letter-spacing: 2px;
-	margin-top: 5px;
-}
-
-.register-form .switch-login,
-.login-form .switch-login {
-	text-align: center;
-	margin-top: 22px;
-}
-
-.register-form .switch-login .or-login,
-.login-form .switch-login .or-login {
-	color: #252525;
-	font-size: 14px;
-	letter-spacing: 2px;
-	text-transform: uppercase;
-	position: relative;
-}
-
-.register-form .switch-login .or-login:before,
-.login-form .switch-login .or-login:before {
-	position: absolute;
-	left: 0;
-	bottom: 0;
-	height: 2px;
-	width: 100%;
-	background: #9f9f9f;
-	content: "";
-}
-
-.login-form .group-input.gi-check {
-	margin-bottom: 8px;
-}
-
-.login-form .group-input .gi-more {
-    overflow: hidden;
-    label{
-        position: relative;
-        cursor: pointer;
-        padding-left: 28px;
-        font-size: 14px;
-        color: #6B6B6B;
-        float: left;
-        input{
-            position: absolute;
-            visibility: hidden;
-            &:checked~span{
-                border-color: #6C6C6C;
-            }
-            &:checked~span:after{
-                border-color: #6c6c6c;
-            }     
-        }
-    }
-    .forget-pass{
-        float: right;
-        line-height: 20px;
-        margin-top: -2px;
-        font-size: 14px;
-        color: #6B6B6B;
+.register{
+	width: 400px;
+	overflow: auto;
+	select{
+        width: 100%;
+        padding: 8px;
+        border-radius: 3px;
+        border: 1px solid #777;
+        margin-bottom: 20px;
     }
 }
-.login-form .group-input .gi-more label .checkmark {
-	position: absolute;
-	left: 0;
-	top: 4px;
-	height: 13px;
-	width: 13px;
-	border: 1px solid #6C6C6C;
-    border-radius: 2px;
-    &:after{
-        left: 2px;
-        top: -2px;
-        width: 13px;
-        height: 6px;
-        border: solid #ffffff;
-        border-width: 2px 2px 0px 0px;
-        -webkit-transform: rotate(127deg);
-        -ms-transform: rotate(127deg);
-        transform: rotate(127deg);
-    }
-    
-}
+
+
+
+

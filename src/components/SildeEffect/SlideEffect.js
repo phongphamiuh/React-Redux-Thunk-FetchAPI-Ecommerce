@@ -5,11 +5,12 @@ import {Carousel} from 'react-bootstrap'
 class SlideEffect extends Component {
     render() {
         return (
-            <Carousel>
+           
+                <Carousel>
                 <Carousel.Item>
                     <img
                     className="d-block w-100"
-                    src="https://resource-cms.springernature.com/springer-cms/rest/v1/content/12458928/data/v3"
+                    src="https://resource-cms.springernature.com/springer-cms/rest/v1/content/18118944/data/v1"
                     alt="First slide"
                     />
                     <Carousel.Caption>
@@ -42,8 +43,8 @@ class SlideEffect extends Component {
                     </Carousel.Caption>
                 </Carousel.Item>
             </Carousel>
+           
         );
     }
 }
-
 export default SlideEffect;

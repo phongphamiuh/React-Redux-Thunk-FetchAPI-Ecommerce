@@ -1,6 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Encode+Sans+Condensed&display=swap');
 
+*{
+	font-family: 'Encode Sans Condensed', sans-serif;
+}
 @media only screen and (max-width: 575px){
 	.item-property{
         display: none;
+        
     }
+}
+.item-property{
+    
+    
 }

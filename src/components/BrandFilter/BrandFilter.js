@@ -22,7 +22,7 @@ const BrandFilter = (props) => {
         return (
             <div className="card mb-3">
                 <div className="card-header">
-                    <h3>Brands</h3>
+                    <h3>Danh mục</h3>
                 </div>
                 <ul className="list-group flex-row flex-wrap">
                     {categorys.map(category => (

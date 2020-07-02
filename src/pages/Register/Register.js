@@ -1,36 +1,79 @@
-import React from 'react';
-import '../Login/Login.scss';
-const Register = () => {
-    return (
-        <div className="register-login-section spad">
-        <div className="container">
-            <div className="row">
-                <div className="col-lg-6 offset-lg-3">
-                    <div className="register-form">
-                        <h2>Đăng ký</h2>
-                        <form action="#">
-                            <div className="group-input">
-                                <label for="username">Tên người dùng hoặc địa chỉ email *</label>
-                                <input type="text" id="username"/>
-                            </div>
-                            <div className="group-input">
-                                <label for="pass">Mật khẩu *</label>
-                                <input type="text" id="pass"/>
-                            </div>
-                            <div className="group-input">
-                                <label for="con-pass">Xác nhận mật khẩu *</label>
-                                <input type="text" id="con-pass"/>
-                            </div>
-                            <button type="submit" className="site-btn register-btn">Đăng ký</button>
-                        </form>
-                        <div className="switch-login">
-                            <a href="./login.html" className="or-login">Đăng nhập</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    );
-};
+import React from "react";
+import { Formik } from "formik";
+import {NavLink} from "react-router-dom";
+
+import * as Yup from "yup";
+const Register = () => (
+  
+  <Formik
+    initialValues={{ email: "", password: "" }}
+    onSubmit={(values, { setSubmitting }) => {
+      setTimeout(() => {
+        console.log("Logging in", values);
+        setSubmitting(false);
+      }, 500);
+    }}
+    validationSchema={Yup.object().shape({
+      email: Yup.string()
+        .email()
+        .required("Vui lòng nhập Email"),
+      password: Yup.string()
+        .required("Vui lòng nhập Password.")
+        .min(8, "Password is too short - should be 8 chars minimum.")
+        .matches(/(?=.*[0-9])/, "Password must contain a number.")
+    })}
+  >
+    {props => {
+      const {
+        values,
+        touched,
+        errors,
+        isSubmitting,
+        handleChange,
+        handleBlur,
+        handleSubmit
+      } = props;
+      return (
+        <form onSubmit={handleSubmit} className="formi">
+          <label htmlFor="email">Email</label>
+          <input
+            name="email"
+            type="text"
+            placeholder="Nhập Email của bạn"
+            value={values.email}
+            onChange={handleChange}
+            onBlur={handleBlur}
+            className={errors.email && touched.email && "error"}
+          />
+          {errors.email && touched.email && (
+            <div className="input-feedback">{errors.email}</div>
+          )}
+
+          <label htmlFor="email">Password</label>
+
+          <input
+            name="password"
+            type="password"
+            placeholder="Nhập Mật Khẩu của bạn"
+            value={values.password}
+            onChange={handleChange}
+            onBlur={handleBlur}
+            className={errors.password && touched.password && "error"}
+          />
+          {errors.password && touched.password && (
+            <div className="input-feedback">{errors.password}</div>
+          )}
+          <button type="submit" disabled={isSubmitting}>
+            Đăng ký
+          </button>
+
+          <button type="submit" >
+            <NavLink className="nav-link" to={"/register"}>Đăng nhập</NavLink>
+          </button>
+        </form>
+      );
+    }}
+  </Formik>
+);
+
 export default Register;

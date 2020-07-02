@@ -5,11 +5,21 @@ import {brandFilterReducer} from "./brand.filter.reducer";
 import {orderByPriceReducer} from "./orderByPrice.filter.reducer";
 import {paginationReducer} from "./pagination.reducer";
 
-
-export default combineReducers({
+import { authentication } from './authentication.reducer';
+import { registration } from './registration.reducer';
+import { users } from './users.reducer';
+import { alert } from './alert.reducer';
+const rootReducer =combineReducers({
     shop,
     blog,
     brandFilter: brandFilterReducer,
     orderBy: orderByPriceReducer,
-    pagination: paginationReducer
+    pagination: paginationReducer,
+   
+    authentication,
+    registration,
+    users,
+    alert
+    
 });
+export default rootReducer;

@@ -3,12 +3,14 @@ import {connect} from 'react-redux';
 import {NavLink} from 'react-router-dom';
 import './Header.scss';
 import '../BrandFilter/BrandFilter.scss';
-import BrandFilter from '../BrandFilter/BrandFilter';
 import {Navbar,Nav,NavDropdown} from 'react-bootstrap';
+import {formatMoney} from "../../pipes/priceFormatter";
+import CartItem from '../CartItem/CartItem';
+import {userActions} from '../../actions/user.actions'
 
-const Header = ({cartLength}) => {
-
-    return (    
+const Header = ({cartLength},props) => {
+    
+    return (        
     <div>   
         <div className="header-top">
             <div className="container">
@@ -22,10 +24,12 @@ const Header = ({cartLength}) => {
                         0358983752
                     </div>
                 </div>
-                <div className="ht-right">
-                    <NavLink className="nav-link login-panel" to={"/register"}><i className="fa fa-user"/>Đăng Ký</NavLink> 
+                <div className="ht-right">  
+                <div>
+                
+                </div>                 
                     <NavLink className="nav-link login-panel" to={"/login"}><i className="fa fa-user"/>Đăng nhập</NavLink>           
-                   
+                    <NavLink className="nav-link login-panel" to={"/register"}><i className="fa fa-user"/>Đăng Ký</NavLink> 
                     <div className="top-social">
                         <a href="#"><i class="fa fa-facebook"></i></a>
                         <a href="#"><i class="fa fa-instagram"></i></a>
@@ -45,7 +49,7 @@ const Header = ({cartLength}) => {
                          <NavLink className="navbar-brand" to="/">Ecommerce</NavLink>
                         </div>
                     </div>
-                    <div className="col-lg-6 col-md-7">
+                    <div className="col-lg-6 col-md-7 ">
                         <div className="advanced-search">
                             <form action="#" className="input-group">
                                 <input type="text" placeholder="Tìm sản phẩm bạn muốn?"/>
@@ -55,9 +59,7 @@ const Header = ({cartLength}) => {
                     </div>
                     
                     <div className="col-lg-4 text-right col-md-3">
-                        <ul className="nav-right">
-                            <li><a href="#" data-toggle="modal" data-target="#quick-view" className="fa fa-user">Tài khoản</a></li>
-
+                        <ul className="nav-right">                  
                             <li className="heart-icon"><a href="#">
                                     <i className="fa fa-heart"></i>
                                     <span>1</span>
@@ -69,43 +71,16 @@ const Header = ({cartLength}) => {
                                  aria-hidden="true" />Cart {cartLength ? `(${cartLength})`: ''}</NavLink>
                             </li>                                               
                                 <div className="cart-hover">
-                                    <div className="select-items">
-                                        <table>
-                                            <tbody>
-                                                <tr>
-                                                    <td className="si-pic"><img src="img/select-product-1.jpg" alt="" /></td>
-                                                    <td className="si-text">
-                                                        <div className="product-selected">
-                                                            <p>100000 VND</p>
-                                                            <h6>Kabino Bedside Table</h6>
-                                                        </div>
-                                                    </td>
-                                                    <td className="si-close">
-                                                        <i className="ti-close"></i>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td className="si-pic"><img src="img/select-product-2.jpg" alt="" /></td>
-                                                    <td className="si-text">
-                                                        <div className="product-selected">
-                                                            <p>100000 VND</p>
-                                                            <h6>Kabino Bedside Table</h6>
-                                                        </div>
-                                                    </td>
-                                                    <td className="si-close">
-                                                        <i className="ti-close"></i>
-                                                    </td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                    </div>
-                                    <div className="select-total">
-                                        <span>total:</span>
-                                        <h5>200000 VND</h5>
+                                    
+                                    <div className="card-footer">
+                                        
+                                            <div>
+                                                 <b>{props.totalPrice}€</b>
+                                            </div>
+                                                         
                                     </div>
                                     <div className="select-button">                               
-                                        <a href="#" className="primary-btn view-card">Xem giỏ hàng</a>
-                                        <a href="#" className="primary-btn checkout-btn">Kiểm tra</a>
+                                        <NavLink  className="primary-btn view-card nav-link" to="/cart">Xem giỏ hàng</NavLink>          
                                     </div>
                                 </div>
                             </li>                         
@@ -126,13 +101,14 @@ const Header = ({cartLength}) => {
         </div>             
             <div className="container-fluid">
                 <Navbar bg="light" expand="lg" className="nav-item">
-                    <Navbar.Brand href="#home"> </Navbar.Brand>
+                    <Navbar.Brand href="#home">                         
+                    </Navbar.Brand>
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
                     <Navbar.Collapse id="basic-navbar-nav">
                         <Nav className="mr-auto nav-menu mobile-menu">
                         <li><NavLink className="nav-link" to={"/"}>Trang chủ</NavLink></li>
                         <li><NavLink className="nav-link" to={"/shop"}>Tất cả sản phẩm</NavLink></li>
-                        <li><Nav.Link href="#link">Thanh toán</Nav.Link></li>
+                        <li><NavLink className="nav-link" to={"/orderadress"}>Thanh toán</NavLink></li>
                         <li><NavLink className="nav-link" to={"/blog"}>Blog</NavLink></li>
                         <li><Nav.Link href="#link">Liên hệ</Nav.Link></li>              
                         </Nav>         
@@ -145,27 +121,24 @@ const Header = ({cartLength}) => {
 };
 
 const mapStateToProps = (state) => {
+    const {users,authentication}=state;
+    const {user}=authentication;
   return {
-      cartLength: state.shop.cart.length
+        cartItems: state.shop.cart,
+        cartItemCount: state.shop.cart.reduce((count, curItem) => {
+            return count + curItem.quantity;
+        }, 0),
+        totalPrice: state.shop.cart.reduce((count, curItem) => {
+            return count + (curItem.price * curItem.quantity);
+        }, 0),
+        cartLength: state.shop.cart.length,
+        user,
+        users
   }
 };
+const actionCreators={
+    getUsers: userActions.getAll,
+    deleteUser: userActions.delete
+}
 
-export default connect(mapStateToProps, null)(Header);
-
-
-/*
-*                         <li className="nav-item active">
-                            <a className="nav-link" href="#">Home
-                                <span className="sr-only">(current)</span>
-                            </a>
-                        </li>
-                        <li className="nav-item">
-                            <a className="nav-link" href="#">About</a>
-                        </li>
-                        <li className="nav-item">
-                            <a className="nav-link" href="#">Services</a>
-                        </li>
-                        <li className="nav-item">
-                            <a className="nav-link" href="#">Contact</a>
-                        </li>
-* */
+export default connect(mapStateToProps, actionCreators)(Header);

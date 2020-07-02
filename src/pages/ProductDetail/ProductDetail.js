@@ -2,7 +2,9 @@ import React from 'react';
 import {connect} from 'react-redux';
 import ProductDetailComponent from '../../components/ProductDetail/ProductDetail';
 import ProductSlider from "../../components/ProductSlider/ProductSlider";
+import ExpansionPn from "../../components/ExpansionPn/ExpansionPn";
 import RateTab from "../../components/RateTab/RateTab";
+import './ProductDetail.scss'
 const ProductDetail = (props) => {
 
     console.log(props);
@@ -12,9 +14,10 @@ const ProductDetail = (props) => {
             <div>
                 <div className="row">
                     <ProductSlider images={props.product.images}/>
-                    <ProductDetailComponent product={props.product}/>                  
+                    <ProductDetailComponent product={props.product}/> 
+                    <ExpansionPn product={props.product}></ExpansionPn>                 
                 </div>
-                <RateTab />
+                <RateTab product={props.product} />
             </div>
         </div>
     );

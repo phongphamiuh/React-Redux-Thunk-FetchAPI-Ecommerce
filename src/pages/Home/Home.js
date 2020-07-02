@@ -4,9 +4,11 @@ import ProductListHome from '../../containers/ProductListHome.js/ProductListHome
 const Home = () => {
     return (
         <React.Fragment>
+            <did>
+                <SlideEffect></SlideEffect> 
+            </did>
             <div className="container">
-                <div className="row">
-                    <SlideEffect></SlideEffect>          
+                <div className="row">                          
                     <ProductListHome/>
                 </div>
             </div>

@@ -1,20 +1,23 @@
 import React from 'react';
 import './RateTab.scss'
 import {Tabs,Tab,Sonnet,TabContent} from 'react-bootstrap';
-const RateTab = () => {
+
+const RateTab = (props) => {
+    
+    const {description}=props.product;
     return (
         <div className="tab">
-        <Tabs defaultActiveKey="home" id="uncontrolled-tab-example" className="row">
+        <Tabs defaultActiveKey="comment" id="uncontrolled-tab-example" className="row">
             <Tab eventKey="home" title="Sơ lược về sách" >
                 <TabContent>
-                Completely updated for Java SE eight, Java: The Complete Reference, Ninth Edition explains the best method to develop, compile, debug, and run Java packages. Bestselling programming author Herb Schildt covers the entire Java language, along with its syntax, key phrases, and elementary programming guidelines, along with very important elements of the Java API library. JavaBeans, servlets, applets, and Swing are examined and precise-world examples reveal Java in movement. New Java SE eight choices similar to lambda expressions, the stream library, and the default interface method are talked about intimately. This Oracle Press helpful useful resource moreover presents a robust introduction to JavaFX.
+                {description}
                 </TabContent>
-                dsad
+                
             </Tab>
             <Tab eventKey="profile" title="Tại sao bạn phải đọc">
                 <TabContent>dsadsd</TabContent>
             </Tab>
-            <Tab eventKey="Nhận xét của các bạn" title="Nhận xét của các bạn" className="info-reviews review-text tab-pane fade in active">
+            <Tab eventKey="comment" title="Nhận xét của các bạn" className="info-reviews review-text tab-pane fade in active">
             <div  className="tab">
                 <div className="about-author">                                    
                         <div className="author-des">

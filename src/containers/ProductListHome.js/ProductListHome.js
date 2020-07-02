@@ -1,39 +1,18 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
-import Product from "../../components/Product/Product";
+import ProductList from "../../components/ProductList/ProductList";
 import {brandFilter} from "../../pipes/brandFilter";
 import {orderByFilter} from "../../pipes/orderByFilter";
-import LayoutMode from "../../components/LayoutMode/LayoutMode";
 import {paginationPipe} from "../../pipes/paginationFilter";
-import Pagination from "../../components/Pagination/Pagination";
+import './ProductListHome.scss';
 
-class ProductList extends Component {
+class ProductListHome extends Component {
 
-    state = {
-        colValue : 'col-lg-4',
+    state = {      
         perPage: 12,
         currentPage: 1,
-        pagesToShow: 3,
-        gridValue: 3
+        pagesToShow: 3,   
     };
-
-    changeLayout = (n) => {
-        this.setState({gridValue: n});
-
-        let realGridValue;
-
-        if(n === 4) {
-            realGridValue = 3
-        } else {
-            realGridValue = 4;
-        }
-
-      this.setState({
-          colValue: `col-lg-${realGridValue}`
-      });
-    };
-
-
     onPrev = () => {
         const updatedState = {...this.state};
         updatedState.currentPage = this.state.currentPage - 1;
@@ -58,39 +37,18 @@ class ProductList extends Component {
 
     render() {
 
-        let isActive = this.state.colValue[this.state.colValue.length -1];
+       
         return (
-            <div className="col-lg-12">
-                <div className="row mb-3">
-                    <div className="col-12 d-none d-lg-block d-xl-block">
-                        <div className="card ">
-                            <div className="card-header d-flex justify-content-end">
-                                <span className="mr-3">Change Layout: </span>
-                                <LayoutMode len={3} isActive={this.state.gridValue === 3} click={this.changeLayout} />
-                                <LayoutMode len={4} isActive={this.state.gridValue === 4}  click={this.changeLayout} />
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <div className="col-lg-12 list-product">
+                <h3 className="m-2">HighLights</h3>
                 <div className="row">
-                    {paginationPipe(this.props.products, this.state).map(product =>{
-                        let classes = `${this.state.colValue} col-md-6 mb-4`;
-                        return (<div className={classes}>
-                            <Product key={product.id} product={product} />
+                    {paginationPipe(this.props.products, this.state).map(product =>{                     
+                        return (<div className="col-lg-2 col-md-4 col-sm-6 col-xs-12">
+                            <ProductList key={product.id} product={product} />
                         </div>)
                     })}                                 
                 </div>
-                <div className="d-flex justify-content-end">
-                    <Pagination
-                        totalItemsCount={this.props.products.length}
-                        currentPage={this.state.currentPage}
-                        perPage={this.state.perPage}
-                        pagesToShow={this.state.pagesToShow}
-                        onGoPage={this.goPage}
-                        onPrevPage={this.onPrev}
-                        onNextPage={this.onNext}
-                    />
-                </div>
+                
             </div>
         );
     }
@@ -105,4 +63,4 @@ const mapStateToProps = state => {
     return {products: filterByOrderArr }
 };
 
-export default connect(mapStateToProps, null)(ProductList);
+export default connect(mapStateToProps, null)(ProductListHome);

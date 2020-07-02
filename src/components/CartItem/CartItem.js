@@ -19,6 +19,7 @@ const CartItem = (
 
     console.log(id);
     const [itemQuantity, setItemQuantity] = useState(quantity);
+    
     const removeItem = () => {
         dispatch(removeProductToCart(id));
     };

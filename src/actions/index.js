@@ -31,9 +31,9 @@ export const decrementCartQuantity = productId => {
   }
 };
 
-
 export const ADD_BOOK_TO_FILTER = 'ADD_BOOK_TO_FILTER';
 export const REMOVE_BOOK_FROM_FILTER = 'REMOVE_BOOK_FROM_FILTER';
+
 
 export const addBrandToFilter = category => {
     return {

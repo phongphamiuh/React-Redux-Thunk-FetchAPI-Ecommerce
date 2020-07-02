@@ -4,7 +4,11 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@material-ui/core": "^4.10.2",
+    "@material-ui/icons": "^4.9.1",
     "bootstrap": "^4.5.0",
+    "formik": "^2.1.4",
+    "history": "^5.0.0",
     "node-sass": "^4.14.1",
     "react": "^16.8.3",
     "react-bootstrap": "^1.0.1",
@@ -12,10 +16,14 @@
     "react-medium-image-zoom": "^3.0.15",
     "react-redux": "^6.0.1",
     "react-router-dom": "^4.3.1",
-    "react-scripts": "2.1.5",
+    "react-scripts": "3.4.1",
     "react-slideshow-image": "^1.5.3",
     "redux": "^4.0.1",
-    "slicknav": "^1.0.8"
+    "redux-logger": "^3.0.6",
+    "redux-thunk": "^2.3.0",
+    "slicknav": "^1.0.8",
+    "typeface-encode-sans-condensed": "0.0.72",
+    "yup": "^0.29.1"
   },
   "scripts": {
     "predeploy": "npm run build",

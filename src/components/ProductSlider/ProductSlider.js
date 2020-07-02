@@ -41,15 +41,14 @@ const ProductSlider = (
         setAItem(i);
     }
     return (
-        <aside className="col-sm-5 col-xs-12">
+        <aside className="col-sm-3 col-xs-12">
             <article className="gallery-wrap">
                 <div className="img-big-wrap">
                     <div><a href="#"><img
                         ref={imageRef}
                         onMouseMove={handleImageChange}
                         onMouseOut={handleMouseOut}
-                        src={img}
-                        
+                        src={img}                      
                     /></a></div>
                 </div>
                 <div className="img-small-wrap">
