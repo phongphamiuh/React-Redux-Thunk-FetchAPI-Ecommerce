@@ -11,8 +11,7 @@
 ## Lợi ích, điểm mạnh các công nghệ sử dụng
 [React.js](https://reactjs.org/docs/getting-started.html): 
 - Ứng dụng sử dụng react.js là thư viện sigle page application mọi dữ liệu đều được render thành Json mỗi lần refesh lại trang web mà không cần reload lại. React sử dụng Virtour DOM  
-<br/>
-- [Redux](https://redux.js.org/introduction/getting-started): Là thử viện của javascript, redux hỗ trợ cho nhiều thư viện khác như react, redux xây dựng kiến trúc giúp xoay quanh các action, reducer, store. Chia bố cục trang web thành nhiều phần giúp người dùng dễ sử dụng <br/>
+- [Redux](https://redux.js.org/introduction/getting-started): Là thử viện của javascript, redux hỗ trợ cho nhiều thư viện khác như react, redux xây dựng kiến trúc giúp xoay quanh các action, reducer, store. Chia bố cục trang web thành nhiều phần giúp người dùng dễ sử dụng
 - [Redux-thunk](https://github.com/reduxjs/redux-thunk): là thư viện middleware cho asynchronous giúp người dùng có thể xử lý các xác thực về login.
 ## Build/Run
 #### Yêu cầu
