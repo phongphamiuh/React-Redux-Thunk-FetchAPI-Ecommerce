@@ -11,6 +11,11 @@
 
 .footer-left {
 	margin-bottom: 30px;
+	h5{
+		color: #ffffff;
+		font-weight: 700;
+		margin-bottom: 26px;
+	}
 	.footer-logo{
 		margin-bottom: 24px;
 		a{
@@ -70,9 +75,10 @@
 	ul li{
 		list-style: none;
 		a{
+			text-decoration: none;
 			line-height: 36px;
 			font-size: 16px;
-			color: #b2b2b2;
+			color: #b2b2b2 !important;
 		}
 	}
 }

@@ -29,6 +29,7 @@ export function users(state = {}, action) {
       return {
         items: state.items.filter(user => user.id !== action.id)
       };
+      
     case userConstants.DELETE_FAILURE:
       // remove 'deleting:true' property and add 'deleteError:[error]' property to user 
       return {

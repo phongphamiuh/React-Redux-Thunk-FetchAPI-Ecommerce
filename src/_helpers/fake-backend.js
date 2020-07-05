@@ -33,7 +33,7 @@ export function configureFakeBackend() {
                         resolve({ ok: true, text: () => Promise.resolve(JSON.stringify(responseJson)) });
                     } else {
                         // else return error
-                        reject('Username or password is incorrect');
+                        reject('Tên người dùng hoặc Email không đúng');
                     }
                     return;
                 }
@@ -79,7 +79,7 @@ export function configureFakeBackend() {
                     // validation
                     let duplicateUser = users.filter(user => { return user.username === newUser.username; }).length;
                     if (duplicateUser) {
-                        reject('Username "' + newUser.username + '" is already taken');
+                        reject('Tên người dùng hoặc Email "' + newUser.username + '" đã tồn tại');
                         return;
                     }
 

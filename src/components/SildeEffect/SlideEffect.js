@@ -14,8 +14,8 @@ class SlideEffect extends Component {
                     alt="First slide"
                     />
                     <Carousel.Caption>
-                    <h3>First slide label</h3>
-                    <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+                    <h3>Trải nghiệm thôi</h3>
+                    <p>Sách sẽ đưa các bạn đến những kiến thức tuyệt vời</p>
                     </Carousel.Caption>
                 </Carousel.Item>
                 <Carousel.Item>
@@ -26,22 +26,11 @@ class SlideEffect extends Component {
                     />
 
                     <Carousel.Caption>
-                    <h3>Second slide label</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <h3>Trải nghiệm thôi</h3>
+                    <p>Sách sẽ đưa các bạn đến những kiến thức tuyệt vời</p>
                     </Carousel.Caption>
                 </Carousel.Item>
-                <Carousel.Item>
-                    <img
-                    className="d-block w-100"
-                    src="https://resource-cms.springernature.com/springer-cms/rest/v1/content/12458928/data/v3"
-                    alt="Third slide"
-                    />
-
-                    <Carousel.Caption>
-                    <h3>Third slide label</h3>
-                    <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
-                    </Carousel.Caption>
-                </Carousel.Item>
+                
             </Carousel>
            
         );

@@ -31,7 +31,7 @@ const OrderFilter = ({dispatch}) => {
     };
 
     if(selected) {
-        removeSelected  =  <span onClick={removeFilter} className="text-remove-selected text-right">Remove filter</span>
+        removeSelected  =  <span onClick={removeFilter} className="text-remove-selected text-right">Xóa chọn</span>
     }
 
 
@@ -43,7 +43,7 @@ const OrderFilter = ({dispatch}) => {
                 </div>
                 <ul className="list-group flex-row  flex-wrap" >
                     <li className="list-group-item flex-fill">
-                        <label className="custom-radio-btn"> Low to high
+                        <label className="custom-radio-btn">Giá từ thấp tới cao
                             <input
                                     value={ORDER_BY_ASC}
                                     type="radio"
@@ -53,7 +53,7 @@ const OrderFilter = ({dispatch}) => {
                         </label>
                     </li>
                     <li className="list-group-item flex-fill">
-                        <label className="custom-radio-btn"> High to low
+                        <label className="custom-radio-btn">Giá từ cao tới thấp
                             <input
                                 value={ORDER_BY_DESC}
                                 onChange={handleRadioChange}

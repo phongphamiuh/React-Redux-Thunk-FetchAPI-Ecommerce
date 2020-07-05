@@ -8,11 +8,11 @@ import './ShoppingCart.scss';
 const ShoppingCart = (props) => {
     return (
         <>
-                <div className="container" style={{paddingTop: '6rem'}}>
+                <div className="container" style={{paddingTop: '2rem'}}>
                     <div className="card shopping-cart">
                         <div className="card-header bg-dark text-light">
                             <i className="fa fa-shopping-cart pr-2" aria-hidden="true"></i>
-                            Shipping cart
+                            Giỏ hàng
                             <div className="clearfix"></div>
                         </div>
                         
@@ -30,7 +30,7 @@ const ShoppingCart = (props) => {
                         <div className="card-footer">
                             <div className="pull-right" style={{margin: '10px'}}>
                                 <div className="pull-right" style={{margin: '5px'}}>
-                                    Total price: <b>{formatMoney(props.totalPrice)}€</b>
+                                    Thành tiền: <b>{formatMoney(props.totalPrice)}€</b>
                                 </div>
                             </div>                   
                         </div>
@@ -53,7 +53,7 @@ const ShoppingCart = (props) => {
                             <div className="row">
                                     <div className="col-xs-12 col-sm-5 offset-sm-7 col-md-4 offset-md-8 right-side">
                                         <button className="btn btn-primary w-100">
-                                        <NavLink className="nav-link " to={"/order"}>Đặt Hàng</NavLink>
+                                        <NavLink className="nav-link " to={"/login"}>Đặt Hàng</NavLink>
                                         </button>
                                     </div>
                             </div>     

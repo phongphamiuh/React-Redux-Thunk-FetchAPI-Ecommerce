@@ -1,0 +1,21 @@
+.contact-img{
+    img{
+        border-radius: 10px;
+    }
+}
+.contact-content{
+    .contact-name{
+        font-family:Verdana, Geneva, Tahoma, sans-serif;
+        text-shadow: 2px 2px;
+    }
+    img{
+        width: 10%;
+    }
+}
+@media (min-width: 768px) and (max-width: 991.98px) { 
+    .contact-img{
+        img{
+            width: 70%;
+        }
+    }
+}

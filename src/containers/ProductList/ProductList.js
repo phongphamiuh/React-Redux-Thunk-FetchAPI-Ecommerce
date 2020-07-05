@@ -38,11 +38,10 @@ class ProductList extends Component {
 
     render() {
         return (
-            <div className="col-lg-9">
-                
+            <div className="col-lg-9">           
                 <div className="row">
                     {paginationPipe(this.props.products, this.state).map(product =>{                      
-                        return (<div className="col-lg-3 col-md-4 col-sm-6">
+                        return (<div className="col-lg-3 col-md-4 col-sm-4 col-6">
                             <Product key={product.id} product={product} />
                         </div>)
                     })}

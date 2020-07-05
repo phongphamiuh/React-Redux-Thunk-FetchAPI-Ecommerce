@@ -43,7 +43,7 @@ class ProductListHome extends Component {
                 <h3 className="m-2">HighLights</h3>
                 <div className="row">
                     {paginationPipe(this.props.products, this.state).map(product =>{                     
-                        return (<div className="col-lg-2 col-md-4 col-sm-6 col-xs-12">
+                        return (<div className="col-lg-2 col-md-4 col-sm-6 col-6">
                             <ProductList key={product.id} product={product} />
                         </div>)
                     })}                                 

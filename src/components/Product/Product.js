@@ -31,9 +31,7 @@ const Product = (props) => {
                     <Link to={`/products/${id}`}>{title}</Link>
                 </h4>
                 <h5 className="product__price">${formatMoney(price)}</h5>
-                <p className="card-text product__description">{date}</p>
-                
-                
+                <p className="card-text product__description">{date}</p>                             
             </div>
         </div>
     );

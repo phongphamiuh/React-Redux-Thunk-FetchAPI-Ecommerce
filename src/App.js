@@ -11,17 +11,18 @@ import Shop from "./pages/Shop/Shop";
 
 import { history } from './_helpers/history';
 import Blog from "./pages/Blog/Blog";
-import RegisterPage from "./pages/Register/RegisterPage";
+import Register from "./pages/Register/Register";
 import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
 import ProductDetail from "./pages/ProductDetail/ProductDetail";
 import ShoppingCart from "./pages/ShopingCart/ShoppingCart";
 import OrderAdress from "./pages/OrderAdress/OrderAdress";
-import LoginPage from "./pages/LoginAnHome/LoginPage";
+import Login from "./pages/Login/Login";
 import HomePage from "./pages/LoginAnHome/HomePage";
 
 import {alertActions} from './actions/alert.actions'
 import {PrivateRoute} from './components/PrivateRT/PrivateRoute';
+import Contact from './pages/Contact/Contact';
 
 
 
@@ -38,12 +39,7 @@ class App extends Component {
       const {alert}=this.props;
     return (
        
-        <div>       
-            <div>
-            {alert.message &&
-                <div className={`alert ${alert.type}`}>{alert.message}</div>
-            }  
-            </div>           
+        <div>                        
             <Router history={history}>
             <React.Fragment>
                 <Header/>            
@@ -54,17 +50,21 @@ class App extends Component {
                     <Route exact path={'/order'} render={() => {
                         return <Redirect to={'/orderadress'}/>
                     }}/>
-
+                    <Route exact path={'/contact'} component={Contact} />
                     <PrivateRoute exact path="/homepage" component={HomePage} />  
 
                     <Route exact path={'/products'} component={Home}/>      
                     <Route exact path={'/orderadress'} component={OrderAdress}/>              
-                    <Route exact path={'/shop'} component={Shop}/>                                
+                    <Route exact path={'/shop'} component={Shop}/>   
+                                                 
                     <Route exact path={'/Blog'} component={Blog}/>
-                    <Route exact path={'/register'} component={RegisterPage}/>
-                    <Route exact path={'/login'} component={LoginPage}/> 
-                    <Route exact path={'/products/:id'} component={ProductDetail}/>                  
-                    <Route exact patr={'/cart'} component={ShoppingCart} />                                                                                                                                                                   
+                    <Route exact path={'/register'} component={Register}/>
+                    <Route exact path={'/login'} component={Login}/> 
+                    <Route exact path={'/products/:id'} component={ProductDetail}/> 
+                                    
+                    <Route exact patr={'/cart'} component={ShoppingCart} /> 
+                     
+
                 </Switch>                         
                 <Footer/>
             </React.Fragment>

@@ -29,6 +29,7 @@ const OrderAdress=()=>{
 
             </div>
             <div className="order">
+                <h2 className="text-center m-3">Đơn đặt hàng</h2>
                 <Formik
                     initialValues={{ name:"",sdt:"",email: "", password: "",address:"", checkboxGroup: [] }}
                     onSubmit={(values, { setSubmitting }) => {

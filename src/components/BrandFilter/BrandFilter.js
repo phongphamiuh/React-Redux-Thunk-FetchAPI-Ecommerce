@@ -2,7 +2,9 @@ import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import './BrandFilter.scss';
 import {categorys} from "../../data/brands";
+import FormControlLabel from '@material-ui/core/FormControlLabel';
 import {addBrandToFilter, removeBrandFromFilter} from "../../actions";
+import Checkbox from '@material-ui/core/Checkbox';
 
 
 const BrandFilter = (props) => {
@@ -19,6 +21,16 @@ const BrandFilter = (props) => {
             dispatch(removeBrandFromFilter(name));
         }
     };
+    const [state, setState] = React.useState({
+        checkedA: true,
+        checkedB: true,
+        checkedF: true,
+        checkedG: true,
+      });
+    
+      const handleChange = (event) => {
+        setState({ ...state, [event.target.name]: event.target.checked });
+      };
         return (
             <div className="card mb-3">
                 <div className="card-header">
@@ -30,9 +42,9 @@ const BrandFilter = (props) => {
                             <label className="custom-checkbox text-capitalize"> {category} ({brandItemsCount[category]})
                                 <input type="checkbox"
                                        name={category}
-                                       className="custom-checkbox__input" onInput={handleSelectBox}/>
+                                       className="custom-checkbox__input " onInput={handleSelectBox}/>
                                 <span className="custom-checkbox__span"></span>
-                            </label>
+                            </label>                                                              
                         </li>
                     ))}
                 </ul>

@@ -1,5 +1,6 @@
 import React from 'react';
 import './Footer.scss';
+import {NavLink} from 'react-router-dom'
 
 const Footer = () => {
     return (
@@ -7,21 +8,17 @@ const Footer = () => {
         <div class="container">
             <div class="row">
                 <div class="col-lg-3">
-                    <div class="footer-left">
-                        <div class="footer-logo">
-                            <a href="#"><img src="img/footer-logo.png" alt=""/>
-                            </a>
-                        </div>
+                    <div class="footer-left">                   
+                        <h5>Địa chỉ</h5>
                         <ul>
                             <li>Địa chỉ: 126/12/1 Đường 30/4 Thị Trấn Ngãi Giao</li>
                             <li>Phone: 0358984752</li>
                             <li>Email: phongpham.iuh@gmail.com</li>
                         </ul>
                         <div class="footer-social">
-                            <a href="#"><i class="fa fa-facebook"></i></a>
-                            <a href="#"><i class="fa fa-instagram"></i></a>
-                            <a href="#"><i class="fa fa-twitter"></i></a>
-                            <a href="#"><i class="fa fa-pinterest"></i></a>
+                            <a href="https://www.linkedin.com/in/phong-ph%E1%BA%A1m-65433b192/"><i class="fa fa-linkedin"></i></a>
+                            <a href="https://github.com/phongphamiuh"><i class="fa fa-github"></i></a>
+                            
                         </div>
                     </div>
                 </div>
@@ -29,8 +26,7 @@ const Footer = () => {
                     <div class="footer-widget">
                         <h5>Thông tin</h5>
                         <ul>
-                            <li><a href="#">Chăm sóc khách hàng</a></li>
-                            <li><a href="#">Thanh toán</a></li>
+                            <li><a href="#">Chăm sóc khách hàng</a></li>           
                             <li><a href="#">Liên hệ</a></li>
                             <li><a href="#">Trợ giúp</a></li>
                         </ul>
@@ -40,10 +36,10 @@ const Footer = () => {
                     <div class="footer-widget">
                         <h5>Tài khoản của tôi</h5>
                         <ul>
-                            <li><a href="#">Tài khoản của tôi</a></li>
-                            <li><a href="#">Liên hệ</a></li>
-                            <li><a href="#">Giỏ hàng</a></li>
-                            <li><a href="#">Mua sắm</a></li>
+                            <li><NavLink  to="/login">Tài Khoản</NavLink></li>
+                            <li><NavLink  to="/orderadress">Thanh Toán</NavLink></li>
+                            <li><NavLink  to="/cart">Giỏ Hàng</NavLink></li>
+                            <li><NavLink  to="/shop">Sách Ưa Thích</NavLink></li>
                         </ul>
                     </div>
                 </div>
