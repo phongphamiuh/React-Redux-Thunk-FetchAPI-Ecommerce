@@ -1,27 +1,27 @@
 {
   "files": {
-    "main.css": "/BookForStudent/static/css/main.845a6311.chunk.css",
-    "main.js": "/BookForStudent/static/js/main.0dfb2321.chunk.js",
-    "main.js.map": "/BookForStudent/static/js/main.0dfb2321.chunk.js.map",
-    "runtime-main.js": "/BookForStudent/static/js/runtime-main.6907d2b9.js",
-    "runtime-main.js.map": "/BookForStudent/static/js/runtime-main.6907d2b9.js.map",
-    "static/css/2.974d5319.chunk.css": "/BookForStudent/static/css/2.974d5319.chunk.css",
-    "static/js/2.b75fa00d.chunk.js": "/BookForStudent/static/js/2.b75fa00d.chunk.js",
-    "static/js/2.b75fa00d.chunk.js.map": "/BookForStudent/static/js/2.b75fa00d.chunk.js.map",
-    "index.html": "/BookForStudent/index.html",
-    "precache-manifest.a82b5eecb1ef5d004efaf2ce0d93ba3b.js": "/BookForStudent/precache-manifest.a82b5eecb1ef5d004efaf2ce0d93ba3b.js",
-    "service-worker.js": "/BookForStudent/service-worker.js",
-    "static/css/2.974d5319.chunk.css.map": "/BookForStudent/static/css/2.974d5319.chunk.css.map",
-    "static/css/main.845a6311.chunk.css.map": "/BookForStudent/static/css/main.845a6311.chunk.css.map",
-    "static/js/2.b75fa00d.chunk.js.LICENSE.txt": "/BookForStudent/static/js/2.b75fa00d.chunk.js.LICENSE.txt",
-    "static/media/index.css": "/BookForStudent/static/media/encode-sans-condensed-latin-900.d6641460.woff",
-    "static/media/myimg.jpg": "/BookForStudent/static/media/myimg.e0c884f8.jpg"
+    "main.css": "/React-Redux-Thunk-FetchAPI-Ecommerce/static/css/main.845a6311.chunk.css",
+    "main.js": "/React-Redux-Thunk-FetchAPI-Ecommerce/static/js/main.1416ad9d.chunk.js",
+    "main.js.map": "/React-Redux-Thunk-FetchAPI-Ecommerce/static/js/main.1416ad9d.chunk.js.map",
+    "runtime-main.js": "/React-Redux-Thunk-FetchAPI-Ecommerce/static/js/runtime-main.06d0c791.js",
+    "runtime-main.js.map": "/React-Redux-Thunk-FetchAPI-Ecommerce/static/js/runtime-main.06d0c791.js.map",
+    "static/css/2.8aa74428.chunk.css": "/React-Redux-Thunk-FetchAPI-Ecommerce/static/css/2.8aa74428.chunk.css",
+    "static/js/2.b75fa00d.chunk.js": "/React-Redux-Thunk-FetchAPI-Ecommerce/static/js/2.b75fa00d.chunk.js",
+    "static/js/2.b75fa00d.chunk.js.map": "/React-Redux-Thunk-FetchAPI-Ecommerce/static/js/2.b75fa00d.chunk.js.map",
+    "index.html": "/React-Redux-Thunk-FetchAPI-Ecommerce/index.html",
+    "precache-manifest.6762ad217926d3c493860b5aef43131e.js": "/React-Redux-Thunk-FetchAPI-Ecommerce/precache-manifest.6762ad217926d3c493860b5aef43131e.js",
+    "service-worker.js": "/React-Redux-Thunk-FetchAPI-Ecommerce/service-worker.js",
+    "static/css/2.8aa74428.chunk.css.map": "/React-Redux-Thunk-FetchAPI-Ecommerce/static/css/2.8aa74428.chunk.css.map",
+    "static/css/main.845a6311.chunk.css.map": "/React-Redux-Thunk-FetchAPI-Ecommerce/static/css/main.845a6311.chunk.css.map",
+    "static/js/2.b75fa00d.chunk.js.LICENSE.txt": "/React-Redux-Thunk-FetchAPI-Ecommerce/static/js/2.b75fa00d.chunk.js.LICENSE.txt",
+    "static/media/index.css": "/React-Redux-Thunk-FetchAPI-Ecommerce/static/media/encode-sans-condensed-latin-900.d6641460.woff",
+    "static/media/myimg.jpg": "/React-Redux-Thunk-FetchAPI-Ecommerce/static/media/myimg.e0c884f8.jpg"
   },
   "entrypoints": [
-    "static/js/runtime-main.6907d2b9.js",
-    "static/css/2.974d5319.chunk.css",
+    "static/js/runtime-main.06d0c791.js",
+    "static/css/2.8aa74428.chunk.css",
     "static/js/2.b75fa00d.chunk.js",
     "static/css/main.845a6311.chunk.css",
-    "static/js/main.0dfb2321.chunk.js"
+    "static/js/main.1416ad9d.chunk.js"
   ]
 }
