@@ -29,8 +29,7 @@ class SlideEffect extends Component {
                     <h3>Trải nghiệm thôi</h3>
                     <p>Sách sẽ đưa các bạn đến những kiến thức tuyệt vời</p>
                     </Carousel.Caption>
-                </Carousel.Item>
-                
+                </Carousel.Item>            
             </Carousel>
            
         );

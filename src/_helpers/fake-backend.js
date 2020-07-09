@@ -14,15 +14,14 @@ export function configureFakeBackend() {
                 if (url.endsWith('/users/authenticate') && opts.method === 'POST') {
                     // get parameters from post request
                     let params = JSON.parse(opts.body);
-
                     // find if any user matches login credentials
                     let filteredUsers = users.filter(user => {
                         return user.username === params.username && user.password === params.password;
                     });
-
                     if (filteredUsers.length) {
                         // if login details are valid return user details and fake jwt token
                         let user = filteredUsers[0];
+                        
                         let responseJson = {
                             id: user.id,
                             username: user.username,
@@ -30,6 +29,7 @@ export function configureFakeBackend() {
                             lastName: user.lastName,
                             token: 'fake-jwt-token'
                         };
+
                         resolve({ ok: true, text: () => Promise.resolve(JSON.stringify(responseJson)) });
                     } else {
                         // else return error
@@ -37,6 +37,15 @@ export function configureFakeBackend() {
                     }
                     return;
                 }
+
+                //my project
+                // if(url.endsWith('/user/home')&& opts.method==='POST'){
+                //     let params=JSON.parse(opts.body);
+                //     let fiterUser=users.filter(user=>{
+                //         return user.username === params.username && user.password === params.password;
+                //     })
+                // }
+                
 
                 // get users
                 if (url.endsWith('/users') && opts.method === 'GET') {
