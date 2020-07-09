@@ -1,9 +1,10 @@
 ## 🛍️ Ứng dụng ecommerce đề tài giới thiệu Web bán sách trực tuyến
 # Bản Demo <a href="https://phongphamiuh.github.io/BookForStudent/" style="font-size: 40px">Click xem bản demo</a>
 ## Tác giả 
+- ## Giáo viên hướng dẫn : thầy Nguyễn Trọng Tiến
 - Phạm Quí Phong (18042041)
 - Phạm Vĩ Khang (18052441)
-- Giáo viên hướng dẫn : thầy Nguyễn Trọng Tiến
+
 ## Chức năng
 - Thêm và xóa sản phẩm từ giỏ hàng
 - Update số lượng sản phẩm và thành tiền trong giỏ hàng
