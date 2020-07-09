@@ -17,6 +17,7 @@
 Ứng dụng sử dụng react.js là thư viện sigle page application mọi dữ liệu đều được render thành Json mỗi lần refesh lại trang web mà không cần reload lại. React sử dụng Virtual DOM giúp trang web có thể render lại những node cần render mà không cần render lại tất cả các node trong Tree Dom.
 - [Redux](https://redux.js.org/introduction/getting-started): Là thử viện của javascript, redux hỗ trợ cho nhiều thư viện khác như react, redux xây dựng kiến trúc giúp xoay quanh các action, reducer, store. Chia bố cục trang web thành nhiều phần giúp người dùng dễ sử dụng
 - [Redux-thunk](https://github.com/reduxjs/redux-thunk): là thư viện middleware cho asynchronous giúp người dùng có thể xử lý các xác thực về login.
+- [Fetch API](https://reactjs.org/docs/faq-ajax.html) 
 ## Build/Run
 #### Yêu cầu
 - [Cài đặt NPM]( https://nodejs.org/en/download/) ( Not packed manager)
